@@ -1,0 +1,6 @@
+
+# Ignorer les backups emacs :
+*~
+eigenFace/build/*
+csv/build/*
+
