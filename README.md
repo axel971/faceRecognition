@@ -7,11 +7,11 @@ VTK <br>
 
 You must download the att_faces.zip file here : http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html <br>
 After that you need to create a text file holding all the path directory coresponding of att_faces images. 
-For doing that, you must compile the application inside the directory named path <br>
+For doing that, you must compile the application inside the directory called path <br>
 
 Instructions for compilation (linux) : <br>
 
-Compilation to creare the txt file : <br>
+Compilation to create the txt file : <br>
 cd path
 cmake -H. -Bbuild/ <br>
 cd build <br>
