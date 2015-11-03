@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11    CMakeFiles/executable.dir/source/main.cpp.o  -o executable -rdynamic -lboost_filesystem -lboost_system 
