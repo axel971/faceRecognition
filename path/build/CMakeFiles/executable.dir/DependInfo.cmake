@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/axel/Documents/code/faceRecognition/csv/source/main.cpp" "/home/axel/Documents/code/faceRecognition/csv/build/CMakeFiles/executable.dir/source/main.cpp.o"
+  "/home/axel/Documents/code/faceRecognition/path/source/main.cpp" "/home/axel/Documents/code/faceRecognition/path/build/CMakeFiles/executable.dir/source/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

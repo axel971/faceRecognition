@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/axel/Documents/code/faceRecognition/csv/source/main.cpp
+/home/axel/Documents/code/faceRecognition/path/source/main.cpp
 iostream
 -
 fstream
 -
 boost/filesystem.hpp
-/home/axel/Documents/code/faceRecognition/csv/source/boost/filesystem.hpp
+/home/axel/Documents/code/faceRecognition/path/source/boost/filesystem.hpp
 

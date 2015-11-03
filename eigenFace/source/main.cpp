@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 {
   EigenFace eigenFace;
 
-  string  path = "../../csv/result/pathFace.txt";
+  string  path = "../../path/result/pathFace.txt";
 
   //Get the all the paths and labels of the images
   eigenFace.readFileTxt(path);

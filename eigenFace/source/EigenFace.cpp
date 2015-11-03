@@ -35,15 +35,16 @@ void EigenFace::readFileTxt(string path)
 
       //Close the file
       file.close();
+
+      //Initialize
+      auto it = max_element(std::begin(m_labels), std::end(m_labels));
+      m_nClasses = (*it) + 1;
+      m_nIndivClass = m_labels.size() / m_nClasses;
     }
 
   else
     cerr << "It's impossible to open this file !" << endl;
 
-  //Initialize
-  auto it = max_element(std::begin(m_labels), std::end(m_labels));
-  m_nClasses = (*it) + 1;
-  m_nIndivClass = m_labels.size() / m_nClasses;
   
  }
 
@@ -68,6 +69,7 @@ void EigenFace::randomChooseTestSet()
 
 void EigenFace::buildTrainingTestSet()
 {
+  assert(!m_greyImgs.empty());
 
   randomChooseTestSet();
 
@@ -107,6 +109,8 @@ void EigenFace::buildTrainingTestSet()
 
 void EigenFace::eigenSpace()
 {
+  assert(!m_trainingSet.empty());
+
   Mat eigenVectorsC, eigenVectors;
 
  //Compute the covariance matrix
@@ -121,11 +125,17 @@ void EigenFace::eigenSpace()
 
 void EigenFace::projectTrainingSet()
 {
+  assert(!m_trainingSet.empty());
+  assert(!m_eigenVectors.empty());
+
   m_trainingSetEig = m_trainingSet.t() * m_eigenVectors;
 }
 
 void EigenFace::projectTestSet()
 {
+  assert(!m_testSet.empty());
+  assert(!m_eigenVectors.empty());
+  
   m_testSetEig = m_testSet.t() * m_eigenVectors;
 }
 
@@ -181,7 +191,8 @@ void EigenFace::showEigenFace(int iAxe1, int iAxe2)
 
 void EigenFace::meanClasses()
 {
- 
+  assert(!m_trainingSetEig.empty());
+
   for(int i = 0; i < m_trainingSetEig.rows; i+= m_nIndivClassTraining)
     {
        Mat tmp = m_trainingSetEig(Rect(0, i, m_trainingSetEig.cols, m_nIndivClassTraining)) ; 
