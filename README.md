@@ -1,4 +1,4 @@
-#Isotropic non linear diffusion
+#Face recognition algorithm
 This programm implement the eigenFace method for face recognition. <br>
 
 NB : Before apply the algorithm of face recognition you need to create a text file with all the path directory of images.
