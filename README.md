@@ -11,7 +11,7 @@ VTK <br>
 Instructions for compilation (linux) : <br>
 
 Compilation to creare the txt file : <br>
-cd csv
+cd path
 cmake -H. -Bbuild/ <br>
 cd build <br>
 make <br>
