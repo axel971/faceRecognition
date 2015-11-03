@@ -16,7 +16,7 @@ cd path
 cmake -H. -Bbuild/ <br>
 cd build <br>
 make <br>
-./exec pathDirectory <br> 
+./exec path_att_faces_Directory <br> 
 
 
 Compilation for the eigenFace module : <br>
